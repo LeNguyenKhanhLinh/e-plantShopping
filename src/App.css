@@ -125,7 +125,7 @@
     padding: 30px;
 }
 
-.aboutus_container {
+.about-us_container {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -141,7 +141,7 @@
     width: 100%; /* Adjust as needed */
   }
 
-  .aboutus_container {
-    width: 50%%; /* Adjust as needed */
+  .about-us_container {
+    width: 50%; /* Adjust as needed */
   }
 }
