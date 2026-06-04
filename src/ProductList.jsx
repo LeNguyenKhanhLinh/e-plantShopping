@@ -294,13 +294,13 @@ function ProductList({ onHomeClick }) {
                     <ul>
                         {plantsArray.map( category =>
                         <div key = {category.category} className="cat-list">
-                            <h2>{category.category}</h2>
+                            <div className="plantname_Heading">
+                                <div className="plant_heading"><h2>{category.category}</h2></div>
+                            </div>
                             <div className="product-list">
                                 {category.plants.map(plants=>
                                 <div key={plants.name} className="product-card">
-                                    <div className="plantname_heading">
-                                    <div className="plant_heading">{plants.name}</div>
-                                    </div>
+                                    <div className="product-title">{plants.name}</div>
                                     <img className="product-image" src={plants.image}/>
                                     <div>{plants.description}</div>
                                     <div className="product-prize">{plants.cost}</div>

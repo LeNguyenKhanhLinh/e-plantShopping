@@ -23,6 +23,9 @@ const CartItem = ({ onContinueShopping }) => {
         e.preventDefault();
         onContinueShopping(e);
   };
+  const handleCheckoutShopping = (e) => {
+  alert('Functionality to be added for future reference');
+  };
 
 
 
