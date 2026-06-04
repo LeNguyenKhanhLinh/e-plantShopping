@@ -218,14 +218,15 @@ function ProductList({ onHomeClick }) {
         padding: '15px',
         display: 'flex',
         justifyContent: 'space-between',
-        alignIems: 'center',
+        alignItems: 'center',
         fontSize: '20px',
     }
     const styleObjUl = {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space between',
+        gap: '600px',
         alignItems: 'center',
-        width: '1100px',
+        width: '70%',
     }
     const styleA = {
         color: 'white',
@@ -251,7 +252,9 @@ function ProductList({ onHomeClick }) {
     const handleContinueShopping = (e) => {
         e.preventDefault();
         setShowCart(false);
+        setShowPlants(true);
     };
+    
     return (
         <div>
             <div className="navbar" style={styleObj}>
@@ -274,7 +277,25 @@ function ProductList({ onHomeClick }) {
             </div>
             {!showCart ? (
                 <div className="product-grid">
+                    <ul>
+                        {plantsArray.map( category =>
+                        <div key = {category.category} className="cat-list">
+                            <h2>{category.category}</h2>
+                            <div className="product-list">
+                                {category.plants.map(plants=>
+                                <div key={plants.name} className="product-card">
+                                    <div className="product-title">{plants.name}</div>
+                                    <img className="product-image" src={plants.image}/>
+                                    <div>{plants.description}</div>
+                                    <div className="product-prize">{plants.cost}</div>
+                                </div>
 
+                                )}
+                            </div>
+                        </div>
+
+                        )}
+                    </ul>
 
                 </div>
             ) : (
